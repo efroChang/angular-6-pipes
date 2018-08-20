@@ -1,7 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
+// Note: pure = faluse may cause performance issue.  It updates the list whenever data changes.
 @Pipe({
-  name: 'filter'
+  name: 'filter',
+  pure: false
 })
 export class FilterPipe implements PipeTransform {
 
